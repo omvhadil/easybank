@@ -1,0 +1,349 @@
+/* ==================== GOOGLAE FONT ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* ====================== VARIABLE CSS ==================== */
+:root{
+    --header-height: 3.5rem;
+    /*================= COLOR =======================*/
+    --botton-color: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    --footer-color: hsl(233, 26%, 24%);
+    --text-color: hsl(233, 8%, 62%);
+    --container-color: hsl(0, 0%, 100%);
+    --Light-Grayish-blue: hsl(220, 16%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    /* ================= FONT AND TYPOGRAPY ============================= */
+    --body-font: 'Public Sans', sans-serif;
+    --biggest-font: 2.3rem;
+    --h1-font-size: 2rem;
+    --h2--font-size: 1.25rem;
+    --h3--font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --line-height: 1.7;
+
+     /* ================= MARGIN BOTTOM =========================== */
+     --mb-0-25: .24rem;
+     --mb-0-5: .5rem;
+     --mb-0-75: .75rem;
+     --mb-1: 1rem;
+     --mb-1-5: 1.5rem;
+     --mb-2: 2rem;
+     --mb-2-5: 2.5rem;
+
+     /* =================== Z INDEX ==================================== */
+     --z-toolip: 10;
+     --z-fixed: 100;
+}
+
+/* RESPONSIVE TYPOGRAPY */
+@media (min-width: 992px){
+     :root{
+          --biggest-font: 4rem;
+          --h1-font-size: 8.15rem;
+          --h2--font-size: 1.5rem;
+          --h3--font-size: 1.25rem;
+          --normal-font-size: 1rem;
+          --small-font-size: .875rem;
+          --smaller-font-size: .813rem;
+     }
+}
+
+/* ====================== BASE ====================================== */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+body{
+     margin: var(--header-height) 0 0 0;
+     font-family: var(--body-font);
+     font-size: var(--normal-font-size);
+     background: var(--Very-Light-Gray);
+     color: var(--text-color);
+}
+
+h1,h2,h3,h4{
+     color: black;
+}
+
+ul{
+     list-style: none;
+}
+
+a{
+     text-decoration: none;
+}
+
+img{
+     max-width: 100%;
+     height: auto;
+}
+
+button,
+input{
+     border: none;
+     outline: none;
+}
+
+button{
+     cursor: pointer;
+     font-family: var(--body-font);
+     font-size: var(--normal-font-size);
+}
+
+/* ==================== REUSABLE CSS CLASSES ===================== */
+.section{
+     padding: 4.5rem 0 2rem;
+}
+
+/* .section__title{
+     font-size: var(--h2--font-size);
+     margin-top: var(--mb-2);
+     text-align: center;
+} */
+
+/* ==================== LAYOUT =============== */
+.container{
+     max-width: 968px;
+     margin-left: var(--mb-1-5);
+     margin-right: var(--mb-1-5);
+}
+.grid{
+     display: grid;
+}
+
+.main{
+     overflow: hidden;
+}
+
+/* ==================== HEADER ====================== */
+.header{
+     width: 100%;
+     background-color: #fff;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: var(--z-fixed);
+}
+
+/* ================== NAV ====================== */
+.nav{
+     height: var(--header-height);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.nav__logo{
+     display: flex;
+     align-items: center;
+     column-gap: .5rem;
+}
+
+.nav__logo-img{
+     width: 8rem;
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle,
+.nav__close{
+     color: var(--text-color);
+}
+
+.nav__toggle{
+     font-size: 1.25rem;
+     cursor: pointer;
+}
+
+@media (max-width: 767px){
+     .nav__menu{
+          position: fixed;
+          width: 100%;
+          background: #fff;
+          top: -150%;
+          left: 0;
+          padding: 3.5rem 0;
+          transition: .4s;
+          z-index: var(--z-fixed);
+          border-radius: 0 0 1.5rem 1.5rem;
+     }
+}
+
+.nav__close{
+     font-size: 1.8rem;
+     position: absolute;
+     top: .5rem;
+     right: .7rem;
+     cursor: pointer;
+}
+
+.nav__list{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     row-gap: 1.5rem;
+}
+
+.nav__link{
+     text-transform: uppercase;
+     transform: .4s;
+}
+
+.nav__link:hover{
+     color: black;
+ }
+
+/* SHOW MENU */
+.show-menu{
+     top: 0rem;
+ }
+
+ /* =============== HOME ==================== */
+ .home__content{
+     row-gap: 1rem;
+ }
+
+ .home__subtitle{
+     font-size: var(--biggest-font);
+     color: #000;
+ }
+
+ .home__group{
+      display: grid;
+      position: relative;
+      padding-top: 2rem;
+      overflow: hidden;
+ }
+.home__img-1{
+      position: relative;
+      top: 0;
+      right: -2rem;
+      width: 900px;
+ }
+ .home__img-2{
+      position: absolute;
+      top: 0;
+ }
+
+ .home__data{
+      text-align: center;
+      margin-top: var(--mb-0-25);
+ }
+ .home__description{
+      margin-top: var(--mb-1);
+      margin-bottom: var(--mb-1);
+      line-height: var(--line-height);
+ }
+
+ .button{
+      background: var(--botton-color);
+      color: #fff;
+      padding: 10px 20px;
+      display: block;
+      width: 9rem;
+      margin: 0 auto;
+      border-radius: 1rem;
+      margin-top: var(--mb-2);
+ }
+
+
+ /* ================== EASYBANK ===================== */
+.easybank{
+     background-color: var(--Light-Grayish-blue);
+}
+
+ .section__title{
+      text-align: center;
+      line-height: var(--line-height);
+}
+     
+.section__subtitle{
+      margin-bottom: var(--mb-1-5);
+      text-align: center;
+      font-size: var(--h1-font-size);
+      color: #000;
+ }
+
+ .easebank__data{
+      text-align: center;
+      margin-top: var(--mb-1-5);
+ }
+
+ .easybank__title{
+      font-size: var(--h2--font-size);
+      color: #000;
+      margin-top: var(--mb-1);
+      margin-bottom: var(--mb-1);
+ }
+
+ .aesybank__description{
+      line-height: var(--line-height);
+ }
+
+
+/* =====================  ARTICLE ================= */
+.article__container{
+     row-gap: 2rem;
+}
+.article__data-img{
+     border-radius: 10px 10px 0 0;
+     margin-bottom: var(--mb-1);
+}
+
+.article__data{
+     background-color: var(--container-color);
+}
+
+.article__smalltitile{
+     font-size: var(--smaller-font-size);
+     margin-bottom: var(--mb-0-75);
+}
+
+.article__subtitle{
+     font-size: var(--h3--font-size);
+     color: #000;
+     font-weight: 600;
+     margin-bottom: var(--mb-1);
+}
+
+.article__title{
+     line-height: var(--line-height);}
+
+/* ========================== FOOTER ============================ */
+.footer{
+     background-color: var(--footer-color);
+     text-align: center;
+}
+
+.footer__sosial{
+     display: flex;
+     column-gap: .75rem;
+     justify-content: center;
+     margin: 1rem 0;
+     margin-bottom: var(--mb-2);
+}
+
+.footer__links{
+     display: grid;
+     row-gap: .75rem;
+}
+
+.footer__link{
+     color: #fff;
+}
+
+.attribution {
+     font-size: 11px;
+     text-align: center; 
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
